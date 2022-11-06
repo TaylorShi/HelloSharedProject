@@ -6,6 +6,7 @@ using Tesla.Framework.Core;
 using AutoMapper.QueryableExtensions;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Tesla.Framework.Infrastructure.Core.Extensions
 {
@@ -27,7 +28,7 @@ namespace Tesla.Framework.Infrastructure.Core.Extensions
         /// <param name="defaultPageSize"></param>
         /// <param name="defaultPageIndex"></param>
         /// <returns></returns>
-        public static async Task<PagedList<TDataModel>> Paged<TDomainModel,TDataModel>(this IQueryable<TDomainModel> query, int pageIndex, int pageSize, AutoMapper.IConfigurationProvider configuration,int maxPageSize=200,int defaultPageSize=15,int defaultPageIndex =1)
+        public static async Task<PagedList<TDataModel>> Paged<TDomainModel,TDataModel>(this IQueryable<TDomainModel> query, int pageIndex, int pageSize, AutoMapper.IConfigurationProvider configuration, CancellationToken cancellationToken, int maxPageSize=200,int defaultPageSize=15,int defaultPageIndex =1)
         {
             if (pageIndex <= 0)
             {
@@ -37,12 +38,12 @@ namespace Tesla.Framework.Infrastructure.Core.Extensions
             {
                 pageSize = defaultPageSize;
             }
-            var resultCount = await query.CountAsync();
+            var resultCount = await query.CountAsync(cancellationToken);
             if (pageSize * (pageIndex - 1) >= resultCount)
             {
                 return new PagedList<TDataModel>(new List<TDataModel>(), resultCount, pageIndex, pageSize);
             }
-            var items = await query.PageBy(pageIndex - 1, pageSize).ProjectTo<TDataModel>(configuration).ToListAsync();
+            var items = await query.PageBy(pageIndex - 1, pageSize).ProjectTo<TDataModel>(configuration).ToListAsync(cancellationToken);
             return new PagedList<TDataModel>(items, resultCount, pageIndex, pageSize);
         }
 
