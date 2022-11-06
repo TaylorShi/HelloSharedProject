@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tesla.Framework.Infrastructure.Core", "Tesla.Framework.Infrastructure.Core\Tesla.Framework.Infrastructure.Core.csproj", "{6B8B5693-245A-4B1C-9B9C-1B608021A7D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tesla.Framework.Domain.Abstractions", "Tesla.Framework.Domain.Abstractions\Tesla.Framework.Domain.Abstractions.csproj", "{CED52364-23CE-4402-A583-EC8E0E13E76E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tesla.Framework.Core", "Tesla.Framework.Core\Tesla.Framework.Core.csproj", "{3A49EBB6-BF19-4860-90DC-3BC1952065DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B8B5693-245A-4B1C-9B9C-1B608021A7D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B8B5693-245A-4B1C-9B9C-1B608021A7D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B8B5693-245A-4B1C-9B9C-1B608021A7D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B8B5693-245A-4B1C-9B9C-1B608021A7D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED52364-23CE-4402-A583-EC8E0E13E76E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED52364-23CE-4402-A583-EC8E0E13E76E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED52364-23CE-4402-A583-EC8E0E13E76E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED52364-23CE-4402-A583-EC8E0E13E76E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A49EBB6-BF19-4860-90DC-3BC1952065DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A49EBB6-BF19-4860-90DC-3BC1952065DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A49EBB6-BF19-4860-90DC-3BC1952065DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A49EBB6-BF19-4860-90DC-3BC1952065DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB10139A-F5F9-442F-9054-DED22C6438E7}
+	EndGlobalSection
+EndGlobal
