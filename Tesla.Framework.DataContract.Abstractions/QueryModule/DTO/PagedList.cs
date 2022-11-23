@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Tesla.Framework.Core
+namespace Tesla.Framework.DataContract.Abstractions.QueryModule.DTO
 {
     /// <summary>
     /// 分页数据
@@ -46,7 +46,7 @@ namespace Tesla.Framework.Core
             }
             else
             {
-                PageCount = (int)Math.Ceiling((decimal)recordCount / (decimal)pageSize);
+                PageCount = (int)Math.Ceiling(recordCount / (decimal)pageSize);
             }
         }
     }

@@ -7,6 +7,7 @@ using AutoMapper.QueryableExtensions;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Threading;
+using Tesla.Framework.DataContract.Abstractions.QueryModule.DTO;
 
 namespace Tesla.Framework.Infrastructure.Core.Extensions
 {

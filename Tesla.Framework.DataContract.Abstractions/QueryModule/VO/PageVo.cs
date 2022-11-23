@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tesla.Framework.DataContract.Abstractions.QueryModule
+namespace Tesla.Framework.DataContract.Abstractions.QueryModule.VO
 {
     /// <summary>
-    /// 分页查询基础入参
+    /// 分页查询入参
     /// </summary>
-    public class PublicPageVo
+    public class PageVo : IPageVo
     {
         /// <summary>
         /// 页码

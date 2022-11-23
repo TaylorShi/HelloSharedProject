@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Security.Principal;
 using System.Text;
+using Tesla.Framework.Domain.Abstractions.IdBuilders.Extensions;
 
 namespace Tesla.Framework.Domain.Abstractions
 {
@@ -65,6 +66,11 @@ namespace Tesla.Framework.Domain.Abstractions
     /// <typeparam name="TKey"></typeparam>
     public abstract class Entity<TKey> : Entity, IEntity<TKey>
     {
+        protected Entity()
+        {
+            Id = this.CreateIndentity<TKey>();
+        }
+
         int? _requestedHashCode;
         public virtual TKey Id { get; protected set; }
         public override object[] GetKeys()

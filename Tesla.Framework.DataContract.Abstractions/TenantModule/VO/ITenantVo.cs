@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tesla.Framework.DataContract.Abstractions.TenantModule
+namespace Tesla.Framework.DataContract.Abstractions.TenantModule.VO
 {
     /// <summary>
     /// 商户入参接口

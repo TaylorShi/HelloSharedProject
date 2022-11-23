@@ -5,7 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Algorithms\Snowflake\DefaultSnowflakeRuler.cs" />
+    <Compile Remove="Algorithms\Snowflake\DisposableAction.cs" />
+    <Compile Remove="Algorithms\Snowflake\DistributedIdExtension.cs" />
+    <Compile Remove="Algorithms\Snowflake\DistributedIdWorker.cs" />
+    <Compile Remove="Algorithms\Snowflake\ISnowflakeRuler.cs" />
+    <Compile Remove="Extensions\TimeExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Tesla.Framework.Core\Tesla.Framework.Core.csproj" />
+    <ProjectReference Include="..\Tesla.Framework.DataContract.Abstractions\Tesla.Framework.DataContract.Abstractions.csproj" />
     <ProjectReference Include="..\Tesla.Framework.Domain.Abstractions\Tesla.Framework.Domain.Abstractions.csproj" />
   </ItemGroup>
 
